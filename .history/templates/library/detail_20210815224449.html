@@ -1,0 +1,6 @@
+
+<ol>
+    {% for books in book.place_set.all %}
+        <li name="book" id="book{{forloop.counter}}">{{book.title}} || {{book.author}}</li>
+    {% endfor %}
+</ol>

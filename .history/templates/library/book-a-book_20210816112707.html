@@ -1,0 +1,5 @@
+{% if avalibility = False %}
+<h1>Ta książka nie jest już dostępna (ktoś w tym szybszym czasie musiał wypożyczyć).</h1>
+{% else %}
+<h1>Pomyślnie wypożyczono książkę autora <i>{{book.author}}</i> pt. </i>{{book.title}}</i></h1>
+{% endif %}

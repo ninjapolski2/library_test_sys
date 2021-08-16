@@ -1,0 +1,8 @@
+{% if book.place_set.all %}
+    <ol>
+        {% for book in book.place_set.all %}
+            <li name="book" id="book{{forloop.counter}}">{{book.title}} || {{book.author}}</li>
+        {% endfor %}
+    </ol>
+{% else %}
+    <h1>Brak informacji o tej książce.</h1>

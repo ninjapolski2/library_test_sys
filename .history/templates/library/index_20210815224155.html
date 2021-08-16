@@ -1,0 +1,6 @@
+{% if books_list %}
+    <ul>
+        {% for book in books_list %}
+            <li href="library/{{book.id}}/"> {{book.title}} - {{book.author}}</li>
+        {% endfor %}
+    
