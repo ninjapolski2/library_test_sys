@@ -1,0 +1,9 @@
+{% if books_list %}
+    <ul>
+        {% for book in books_list %}
+            <li href="{% url 'library:index' book.identificator %}"> {{book.title}} - {{book.author}}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <h1>Brak dostępnych książek do wypożyczenia.</h1>
+{% endif %}

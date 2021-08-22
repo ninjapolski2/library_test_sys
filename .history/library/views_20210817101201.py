@@ -17,7 +17,7 @@ class BookInfoDetailView(generic.DetailView):
 
 class BookABookResultsView(generic.DetailView):
     model = Book
-    template_name = "book-a-book-results.html"
+    template_name = "library/book-a-book-results.html"
 
 def book_a_book(request, identificator):
     book = get_object_or_404(Book, identificator)

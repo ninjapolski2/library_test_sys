@@ -7,6 +7,7 @@ from . import views
 class IndexViewList(generic.ListView):
     template_name = "index.html"
     context_object_name = "books_list"
+    book_list = Book.objects.order_by()
 
     def get_queryset(request):
         return Book.objects.all()

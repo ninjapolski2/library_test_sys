@@ -18,7 +18,7 @@ class Place(models.Model):
     availability = models.BooleanField('dostępność', default=True)
 
     def __str__(self):
-        return f"{self.identificator_of_the_book}"
+        return self.identificator_of_the_book + ": " + self.shelf_identificator
 
     def is_available(self):
         return availability == True
