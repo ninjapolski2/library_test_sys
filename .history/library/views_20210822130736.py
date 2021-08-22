@@ -9,7 +9,7 @@ class IndexViewList(generic.ListView):
     context_object_name = "books_list"
 
     def get_queryset(request):
-        return Book.objects.all()
+        return Book.objects.all()[::1]
 
 class BookInfoDetailView(generic.DetailView):
     model = Book
