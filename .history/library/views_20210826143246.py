@@ -4,7 +4,7 @@ from .models import Book, Place
 from django.http import HttpResponse
 from . import views
 
-
+place = Place()
 class IndexViewList(generic.ListView):
     template_name = "index.html"
     context_object_name = "books_list"

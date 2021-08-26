@@ -5,11 +5,7 @@ class BookAdmin(admin.ModelAdmin):
     fields = ['author', 'title', "identificator"]
 
 class PlaceAdmin(admin.ModelAdmin):
-    fieldsets = [
-        ("Biblioteka", {"fields": ["filia", "address", "shelf_identificator"]}),
-        (None, {"fields": ["availability"]}),
-    ]
-
+    fieldsets = [["Biblioteka", ["filia", "adress", "shelf_identificator"]]]
 admin.site.register(Book, BookAdmin)
-admin.site.register(Place, PlaceAdmin)
+admin.site.register(Place)
 # Register your models here.

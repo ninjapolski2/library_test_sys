@@ -1,0 +1,9 @@
+{% if book %}
+    <ol>
+        {% for info in book.place_set.all %}
+                <li name="book" id="book{{forloop.counter}}">{{info.shelf_identificator}} | {{ info.filia}} | {{ info.address}} | {{}}</li>
+        {% endfor %}
+    </ol>
+{% else %}
+    <h1>Brak informacji o tej książce.</h1>
+{% endif %}
