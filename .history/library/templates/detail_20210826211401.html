@@ -1,9 +1,0 @@
-{% if Place.objects.all %}
-    <ol>
-        {% for info in book. %}
-                <li name="book" id="book{{forloop.counter}}">{{b_info}}</li>
-        {% endfor %}
-    </ol>
-{% else %}
-    <h1>Brak informacji o tej książce.</h1>
-{% endif %}
