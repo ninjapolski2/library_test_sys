@@ -4,7 +4,7 @@ from .models import Book, Place
 from django.http import HttpResponse
 from . import views
 
-
+place = Place()
 class IndexViewList(generic.ListView):
     template_name = "index.html"
     context_object_name = "books_list"
@@ -25,4 +25,4 @@ def book_a_book(request, identificator):
     selected_book = book.place_set.get(pk=request.GET['place'])
     selected_book.available = False
     selected_book.save()
-    return HttpResponse(reverse("library:book-a-book-results", args=(book.pk,)))
+    return HttpResponse(reverse("library:book-a-book-results", args=(Book().)))

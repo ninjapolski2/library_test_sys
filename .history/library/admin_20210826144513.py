@@ -6,7 +6,7 @@ class BookAdmin(admin.ModelAdmin):
 
 class PlaceAdmin(admin.ModelAdmin):
     fieldsets = [
-        ("Biblioteka", {"fields": ["filia", "address", "shelf_identificator"]}),
+        ("Biblioteka", {"fields": ["filia", "adress", "shelf_identificator"]}),
         (None, {"fields": ["availability"]}),
     ]
 

@@ -15,10 +15,10 @@ class Place(models.Model):
     shelf_identificator = models.CharField("pokój|dział/półka", max_length=15)
     filia = models.IntegerField("filia")
     address = models.TextField("adres", max_length=1000)
-    availability = models.BooleanField('dostępność')
+    availability = models.BooleanField('dostępność', default=True)
 
     def __str__(self):
-        return f"{self.book}"
+        return f"{self.identificator_of_the_book}"
 
     def is_available(self):
         return availability == True

@@ -1,0 +1,9 @@
+{% if book.place_set.all %}
+    <ol>
+        {% for b in book.place_set.all) %}
+                <li name="book" id="book{{b}}">{{place[b]}}</li>
+        {% endfor %}
+    </ol>
+{% else %}
+    <h1>Brak informacji o tej książce.</h1>
+{% endif %}
